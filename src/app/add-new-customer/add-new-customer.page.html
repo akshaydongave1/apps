@@ -1,0 +1,102 @@
+<ion-header>
+    <ion-toolbar class="toolbar ">
+        <ion-row>
+            <ion-col size="1.5" class="alignment no-padding">
+                <img src="assets/imgs/back-arrow-icon.png" (click)="goBack()" class="toolbarBtn" />
+            </ion-col>
+            <ion-col size="9" class="alignment no-padding headerTxt">
+                ADD NEW CUSTOMER </ion-col>
+            <ion-col size="1.5" class="alignment no-padding">
+                <ion-menu-button>
+                    <img src="assets/imgs/list-icon.png" class="toolbarBtn" />
+                </ion-menu-button>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="div doCenter">
+        <ion-card class="card">
+            <ion-card-content class="cardContent marginT-10">
+                <form [formGroup]="customerForm" (ngSubmit)="submitData()" method="get">
+                    <ion-item class="inputText input">
+                        <!-- <ion-label> Customer Name : </ion-label> -->
+                        <ion-input class="inputText" formControlName="customerName" type="text" placeholder="Customer Name "></ion-input>
+                    </ion-item>
+                    <ion-item class="inputText input">
+                        <!-- <ion-label>Mobile Number : </ion-label> -->
+                        <ion-input formControlName="customerNumber" type="text" placeholder="Mobile Number"></ion-input>
+                    </ion-item>
+                    <ion-item class="inputText input">
+                        <!-- <ion-label>Mail-Id : </ion-label> -->
+                        <ion-input class="inputText" formControlName="customerMail" type="text" placeholder="Mail-Id"></ion-input>
+                    </ion-item>
+                    <ion-item class="inputText input">
+                        <!-- <ion-label>Area : </ion-label> -->
+                        <ion-input formControlName="customerArea" type="text" placeholder="Area"></ion-input>
+                    </ion-item>
+                    <div class="divCheck">
+                        <span class="divTxtStyle">Select Days : </span>
+                        <ion-row class="marginB-4">
+                            <ion-col size="1.7" class="noPadding">
+                                <span class="dayTxt">Sun</span>
+                            </ion-col>
+                            <ion-col size="1.7" class="noPadding">
+                                <span class="dayTxt">Mon</span>
+                            </ion-col>
+                            <ion-col size="1.7" class="noPadding">
+                                <span class="dayTxt">Tue</span>
+                            </ion-col>
+                            <ion-col size="1.7" class="noPadding">
+                                <span class="dayTxt">wed</span>
+                            </ion-col>
+                            <ion-col size="1.7" class="noPadding">
+                                <span class="dayTxt">THU</span>
+                            </ion-col>
+                            <ion-col size="1.7" class="noPadding">
+                                <span class="dayTxt">FRI</span>
+                            </ion-col>
+                            <ion-col size="1.7" class="noPadding">
+                                <span class="dayTxt">SAT</span>
+                            </ion-col>
+                        </ion-row>
+                        <ion-row class="marginB-20">
+                            <ion-col size="1.7" class="noPadding">
+                                <ion-checkbox class="checkBox" value="sun" checked=true mode="ios"></ion-checkbox>
+                            </ion-col>
+
+                            <ion-col size="1.7" class="noPadding">
+                                <ion-checkbox class="checkBox" value="mon" checked=true mode="ios"></ion-checkbox>
+                            </ion-col>
+
+                            <ion-col size="1.7" class="noPadding">
+                                <ion-checkbox class="checkBox" value="tue" checked=true mode="ios"></ion-checkbox>
+                            </ion-col>
+
+                            <ion-col size="1.7" class="noPadding">
+                                <ion-checkbox class="checkBox" value="wed" checked=true mode="ios"></ion-checkbox>
+                            </ion-col>
+                            <ion-col size="1.7" class="noPadding">
+                                <ion-checkbox class="checkBox" value="thu" checked=true mode="ios"></ion-checkbox>
+                            </ion-col>
+                            <ion-col size="1.7" class="noPadding">
+                                <ion-checkbox class="checkBox" value="fri" checked=true mode="ios"></ion-checkbox>
+                            </ion-col>
+                            <ion-col size="1.7" class="noPadding">
+                                <ion-checkbox class="checkBox" value="sat" checked=true mode="ios"></ion-checkbox>
+                            </ion-col>
+
+                        </ion-row>
+                    </div>
+
+                    <div class="btnAdd" (click)="onClick()">
+                        <span>Add Products +</span>
+                    </div>
+                    <ion-button type="submit" expand="block" mode="ios">submit</ion-button>
+
+                </form>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

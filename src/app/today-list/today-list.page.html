@@ -1,0 +1,43 @@
+<ion-header>
+    <ion-toolbar class="toolbar ">
+        <ion-row>
+            <ion-col size="1.5" class="alignment no-padding">
+                <img src="assets/imgs/back-arrow-icon.png" (click)="goBack()" class="toolbarBtn" />
+            </ion-col>
+            <ion-col size="9" class="alignment no-padding headerTxt">
+                DASHBOARD </ion-col>
+            <ion-col size="1.5" class="alignment no-padding">
+                <ion-menu-button>
+                    <img src="assets/imgs/list-icon.png" class="toolbarBtn" />
+                </ion-menu-button>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <ion-grid no-padding>
+        <ion-card>
+            <ion-card-content>
+                <ion-row>
+                    <ion-col size="2" class="noPadding">Sr.No</ion-col>
+                    <ion-col size="5" class="noPadding">CustomerName</ion-col>
+                    <ion-col size="3" class="noPadding">Qty</ion-col>
+                    <ion-col size="2" class="noPadding">P/A</ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+        <ion-card *ngFor="let item of data;let ind=index;">
+            <ion-card-content>
+                <ion-row>
+                    <ion-col size="2" class="noPadding">{{ind}}</ion-col>
+                    <ion-col size="5" class="noPadding">{{item.name}}</ion-col>
+                    <ion-col size="3" class="noPadding">{{item.qty}}</ion-col>
+                    <ion-col size="2" class="noPadding">
+                        <ion-checkbox class="checkBox" value="tue" checked={{item.checkStatus}} mode="ios"></ion-checkbox>
+                    </ion-col>
+                </ion-row>
+            </ion-card-content>
+        </ion-card>
+
+    </ion-grid>
+</ion-content>

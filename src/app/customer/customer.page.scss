@@ -1,0 +1,29 @@
+.flexDirCol {
+    flex-direction: column;
+}
+
+.borderT {
+    border-top: 0.5px solid rgba(128, 128, 128, 0.4);
+}
+
+.borderB {
+    border-bottom: 0.5px solid rgba(128, 128, 128, 0.4);
+}
+
+.borderL {
+    border-left: 0.5px solid rgba(128, 128, 128, 0.4);
+}
+
+.borderR {
+    border-right: 0.5px solid rgba(128, 128, 128, 0.4);
+}
+
+.item-native {
+    padding: 0px !important;
+}
+
+.fontTxt {
+    font-size: 16px;
+    font-family: sans-serif;
+    text-transform: capitalize;
+}

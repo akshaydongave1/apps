@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar class="toolbar ">
+        <ion-row>
+            <ion-col size="1.5" class="alignment no-padding">
+                <img src="assets/imgs/back-arrow-icon.png" (click)="goBack()" class="toolbarBtn" />
+            </ion-col>
+            <ion-col size="9" class="alignment no-padding headerTxt">
+                Login </ion-col>
+            <ion-col size="1.5" class="alignment no-padding">
+                <ion-menu-button>
+                    <img src="assets/imgs/list-icon.png" class="toolbarBtn" />
+                </ion-menu-button>
+            </ion-col>
+        </ion-row>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="div">
+        <ion-card class="card">
+            <ion-card-content class="cardContent">
+                <form [formGroup]="loginForm" (ngSubmit)="submitData()" method="get">
+                    <ion-item class="input">
+                        <ion-input class="inputText" formControlName="firstName" type="text" placeholder="User Name"></ion-input>
+                    </ion-item>
+                    <ion-item class="input">
+                        <ion-input class="inputText" formControlName="lastName" type="text" placeholder="Password"></ion-input>
+                    </ion-item>
+                    <ion-button type="submit" expand="block" mode="ios">Login</ion-button>
+                </form>
+            </ion-card-content>
+        </ion-card>
+    </div>
+</ion-content>

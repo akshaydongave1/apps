@@ -1,0 +1,34 @@
+<ion-app>
+    <ion-split-pane contentId="main-content">
+        <ion-menu side="end" contentId="main-content" menuId="first">
+            <ion-header>
+                <ion-toolbar color="primary">
+                    <ion-title>MENU</ion-title>
+                </ion-toolbar>
+            </ion-header>
+            <ion-content>
+                <img>
+                <ion-list>
+                    <ion-item>
+                        <ion-icon name="home" slot="start" class="icon"></ion-icon>
+                        <ion-label>Home</ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-icon src="../assets/icon/contacts.svg" class="icon" slot="start"></ion-icon>
+                        <ion-label>Customer List</ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-icon src="../assets/icon/mony.svg" class="icon" slot="start"></ion-icon>
+                        <ion-label>Customer Pyment</ion-label>
+                    </ion-item>
+                    <ion-item>
+                        <ion-icon src="../assets/icon/stats.svg" class="icon" slot="start"></ion-icon>
+                        <ion-label>Product List</ion-label>
+                    </ion-item>
+
+                </ion-list>
+            </ion-content>
+        </ion-menu>
+        <ion-router-outlet id="main-content"></ion-router-outlet>
+    </ion-split-pane>
+</ion-app>
